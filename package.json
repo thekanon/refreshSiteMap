@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "job-init": "pm2 start doovelop-refresh.js --name \"doovelop\" --cron '0 */2 * * *'",
+    "doovelop-init": "pm2 start job-search-refresh.js --name \"doovelop\" --cron '0 */2 * * *'"
   },
   "repository": {
     "type": "git",
