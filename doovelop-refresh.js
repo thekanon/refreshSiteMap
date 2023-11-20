@@ -88,6 +88,7 @@ const puppeteer = require("puppeteer");
     }
 
     const urls = extractUrls(xmlString);
+    const timeSeconds = urls.length * 3000;
 
     urls.forEach((url, index) => {
       setTimeout(() => {
@@ -97,6 +98,6 @@ const puppeteer = require("puppeteer");
   });
 
   // Keep the browser open for a while
-  await new Promise((resolve) => setTimeout(resolve, 10000));
+  await new Promise((resolve) => setTimeout(resolve, 1000 * 60 * 3));
   await browser.close();
 })();
