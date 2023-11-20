@@ -180,3 +180,4 @@ const puppeteer = require("puppeteer");
   await new Promise((resolve) => setTimeout(resolve, 1000 * 60 * 3));
   await browser.close();
 })();
+Set-ExecutionPolicy RemoteSigned
